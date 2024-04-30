@@ -1,5 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react'
 import { useTransition, animated } from '@react-spring/web'
+import ReactPlayer from 'react-player';
+
 
 import styles from '../styles.module.css'
 import Card from './Card'
@@ -46,6 +48,7 @@ export default function Loading() {
 
   return (
     <div className={styles.container}>
+        {/* <ReactPlayer url="/sound/love.mp3" playing /> */}
         { card ? <Card /> : (<div className={styles.main}>
         {transitions(({ innerHeight, ...rest }, item) => (
           <animated.div className={styles.transitionsItem} style={rest} onClick={reset}>
